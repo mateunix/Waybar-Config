@@ -1,0 +1,227 @@
+* {
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+window#waybar {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    background-color: transparent;
+    border-bottom: 0px;
+    color: #000000;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+tooltip {
+    border: 2px solid #ffffff;
+    background-color: rgba(225, 225, 225, 0.7); /* Tooltip background color */
+    color: #000000; /* Text color */
+    font-family: JetBrains, monospace;
+    font-size: 12px; /* Text size */
+    padding: 5px 10px; /* Spacing inside the tooltip */
+    border-radius: 6px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(225, 225, 225, 0.5); /* Subtle shadow for depth */
+    opacity: 0.95; /* Slight transparency */
+    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.modules-right {
+    margin: 5px 5px 0 0;
+}
+.modules-center {
+    margin: 5px 0 0 0;
+}
+.modules-left {
+    margin: 5px 0 0 5px;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    /* box-shadow: inset 0 -3px transparent; */
+    border: none;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+/*
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #eceff4;
+} */
+
+#workspaces {
+    background-color: transparent;
+}
+
+#workspaces button {
+    border: 2px solid #ffffff;
+    background-color: rgba(225, 225, 225, 0.9);
+    margin: 0 2px;
+    padding: 0 5px;
+    border-radius: 15%;
+    color: #000000;
+}
+
+/*#workspaces button:first-child {
+    border-radius: 20%;
+}
+
+#workspaces button:last-child {
+    border-radius: 20%;
+}*/
+
+#workspaces button:hover {
+    color: #000000;
+    border-radius: 15%;
+}
+
+#workspaces button.focused {
+    background-color: rgba(225,225,255,0.9);
+    color: #000000;
+    /* box-shadow: inset 0 -3px #ffffff; */
+}
+
+#clock {
+    border: 2px solid #ffffff;
+    background-color: rgba(225, 225, 225, 0.9);
+    color: #000000;
+    margin: 0 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+#tray {
+    border: 2px solid #ffffff;
+    padding: 0 10px;
+    margin: 0 2px;
+    background-color: #4a90d9;
+    color: #000000;
+}
+#pulseaudio,
+#wireplumber {
+    border: 2px solid #ffffff;
+    padding: 0 10px;
+    margin: 0 2px;
+    background-color: #4a90d9;
+    color: #ffffff;
+}
+
+#idle_inhibitor,
+#cava,
+#scratchpad,
+#mode,
+#window,
+#battery,
+#backlight,
+#network,
+#bluetooth,
+#mpris,
+#load {
+    border: 2px solid #ffffff;
+    padding: 0 10px;
+    margin: 0 2px;
+    background-color: rgba(225, 225, 225, 0.9);
+    color: #000000;
+}
+
+#mode {
+    background-color: #689d6a;
+    color: #2e3440;
+    /* box-shadow: inset 0 -3px #ffffff; */
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#cava {
+    padding: 0 5px;
+}
+
+#battery.charging,
+#battery.plugged {
+    background-color: #e1e1e1;
+    color: #000000;
+}
+
+@keyframes blink {
+    to {
+        background-color: #2e3440;
+        color: #ffffff;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: #bf616a;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #2e3440;
+}
+
+#wireplumber.muted {
+    background-color: rgba(225,225,225,0.9);
+    color: #000000;
+}
+#pulseaudio.source-muted {
+    background-color: rgba(225,225,225,0.9);
+    color: #000000;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#mpris.playing {
+    background-color: #81a1c1;
+    color: #2e3440;
+}
+
+#tray menu {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+}
+
+#scratchpad.empty {
+    background: transparent;
+}
+#custom-wlogout {
+    border: 2px solid #ffffff;
+    padding: 0 5px;
+    margin: 0 2px;
+    background-color: rgba(225, 225, 225, 0.9); /* Background color */
+    color: #000000; /* Text color */
+    font-weight: bold;
+}
