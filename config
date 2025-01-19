@@ -5,11 +5,10 @@
     "position": "top",
 
     "modules-left": [
-        "clock",
-        "hyprland/workspaces"
+        "clock"
     ],
     "modules-center": [
-
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "tray",
@@ -72,7 +71,7 @@
         "on-click": "~/.config/hypr/scripts/volume.sh toggle",
         "on-scroll-up": "~/.config/hypr/scripts/volume.sh increase",
         "on-scroll-down": "~/.config/hypr/scripts/volume.sh decrease",
-        "on-click-right": "flatpak run com.saivert.pwvucontrol"
+        "on-click-right": "pavucontrol-qt"
     },
     "pulseaudio": {
       "format-source": " {volume}%",
@@ -83,11 +82,11 @@
       "on-click": "~/.config/hypr/scripts/volume.sh toggle_mic",
       "on-scroll-up": "~/.config/hypr/scripts/volume.sh increase_mic",
       "on-scroll-down": "~/.config/hypr/scripts/volume.sh decrease_mic",
-      "on-click-right": "flatpak run com.saivert.pwvucontrol"
+      "on-click-right": "pavucontrol-qt"
 
     },
     "network": {
-      "interface": "wlp7s0",
+      "interface": "wlan0",
       "format-wifi": "{icon} {signalStrength}%",
       "format-ethernet": "{ipaddr}/{cidr} 🖧 ",
       "tooltip-format": "{essid} - {ifname} via {gwaddr} 🖧 ",
