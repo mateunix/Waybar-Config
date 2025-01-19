@@ -92,8 +92,8 @@ button:hover {
 }*/
 
 #workspaces button:hover {
-    color: rgba(225,225,225,0.9);
-    background-color: #000000;
+    color: #FFFFFF;
+    background-color: #3DAEE9;
     border-radius: 15%;
 }
 
@@ -115,8 +115,8 @@ button:hover {
     border: 2px solid #ffffff;
     padding: 0 10px;
     margin: 0 2px;
-    background-color: #000000;
-    color: rgba (225,225,225,0.9);
+    background-color: #3DAEE9;
+    color: #FFFFFF;
 }
 #pulseaudio,
 #wireplumber,
@@ -124,8 +124,8 @@ button:hover {
     border: 2px solid #ffffff;
     padding: 0 10px;
     margin: 0 2px;
-    background-color: #000000;
-    color: rgba (225,225,225,0.9);
+    background-color: #3DAEE9;
+    color: #FFFFFF;
 }
 
 
@@ -203,13 +203,10 @@ label:focus {
     color: #000000;
 }
 #bluetooth.connected {
-    background-color: #000000;
-    color: rgba (225,225,225,0.9);
+    background-color: #3DAEE9;
+    color: #FFFFFF;
 }
-#workspaces.icons {
-    background-color: rgba(225,225,225,0.9);
-    color: #000000;
-}
+
 #network.disconnected {
     background-color: rgba(225,225,225,0.9);
     color: #000000;
