@@ -4,7 +4,6 @@
 }
 
 window#waybar {
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: "JetBrainsMono Nerd Font", monospace;
     background-color: transparent;
     border-bottom: 5px;
@@ -24,15 +23,6 @@ window#waybar.hidden {
 window#waybar.empty #window {
     background-color: transparent;
 }
-
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
 
 tooltip {
     border: 2px solid #2a2e32;
@@ -57,17 +47,8 @@ tooltip {
 }
 
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    /* box-shadow: inset 0 -3px transparent; */
     border: none;
 }
-
-/* https://github.com/Alexay/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-/*
-button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #eceff4;
-} */
 
 #workspaces {
     background-color: transparent;
@@ -82,14 +63,6 @@ button:hover {
     color: #ffffff;
 }
 
-/*#workspaces button:first-child {
-    border-radius: 20%;
-}
-
-#workspaces button:last-child {
-    border-radius: 20%;
-}*/
-
 #workspaces button:hover {
     color: #FFFFFF;
     background-color: #3DAEE9;
@@ -99,7 +72,6 @@ button:hover {
 #workspaces button.focused {
     background-color: #3DAEE9;
     color: #ffffff;
-    /* box-shadow: inset 0 -3px #ffffff; */
 }
 
 #clock {
@@ -148,10 +120,8 @@ button:hover {
 #mode {
     background-color: #689d6a;
     color: #2e3440;
-    /* box-shadow: inset 0 -3px #ffffff; */
 }
 
-/* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
